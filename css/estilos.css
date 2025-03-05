@@ -7,6 +7,8 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    flex-direction: column-reverse; /* Esto pone el footer arriba */
+
 }
 
 .container {

@@ -100,6 +100,9 @@
                     <p class="knowledge__paragraph">Actualmente sigo estudiando para mejorar mis habilidades como programador aqui encontraras 
                         los certificados que e aprobado 
                         <ol>
+                            <li>Curso de Python</li>
+                            <li>Course of strategies to learn english online</li>
+                            <li>Curso de CHATGPT</li>
                             <li>Curso Profesional de Git y GitHub </li>
                             <li>Curso Definitivo de HTML y CSS </li>
                             <li>Curso Básico de PHP: Instalación, </li>
@@ -110,10 +113,38 @@
                           </ol>
                     </a>
                 </div>
-                <figure class="knowledge__picture">
+                <!-- <figure class="knowledge__picture">
                     <img src="./images/certi.png" class="knowledge__img">
-                </figure>
-            </div>
+                </figure> -->
+
+                  <!-- PRUEBA DE CARRUSEL DE IMAGENES  -->
+                  <div class="carousel-container">
+                    <div class="carousel">
+                        <img src="images/pruebitas/1.png" alt="Imagen 1" class="active">
+                        <img src="images/pruebitas/2.png" alt="Imagen 2">
+                        <img src="images/pruebitas/3.png" alt="Imagen 3">
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            
+                <script>
+                    let currentIndex = 0;
+                    const images = document.querySelectorAll(".carousel img");
+                    const totalImages = images.length;
+            
+                    document.querySelector(".next").addEventListener("click", () => moveCarousel(1));
+                    document.querySelector(".prev").addEventListener("click", () => moveCarousel(-1));
+            
+                    function moveCarousel(direction) {
+                        images[currentIndex].classList.remove("active");
+                        currentIndex = (currentIndex + direction + totalImages) % totalImages;
+                        images[currentIndex].classList.add("active");
+                    }
+            
+                    setInterval(() => moveCarousel(1), 5000); // Cambio automático cada 3 segundos
+                </script>
+            </div>   
         </section>
 
         <section class="price container" id="tec">
@@ -293,6 +324,9 @@
             </nav>
 
         </section>
+
+      
+        
 
         <section class="footer__copy container">
             <div class="footer__social">
